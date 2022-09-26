@@ -1,0 +1,70 @@
+    <!DOCTYPE html>
+    <html lang="en">
+    <head> 
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" type="text/css" href="/static/style/style.css">
+        <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;900&display=swap" rel="stylesheet">
+        <title>Ascii-art-web</title>
+        <link rel="icon" href="../static/img/favicon.ico" type="image/x-icon">
+    </head>
+    <body>
+        <div class="container">
+            <header>
+                <div class="wrapp_header">  
+                    <a href="/"><div class="logo"></div></a>  
+                    <h1 class="title">ascii-art-web</br>stylize</h1>
+                    <a class="about" href="./about.html">About this project</a>
+                </div>
+            </header>
+            <form class="form" method="post" action="/ascii-art">
+                <div class="block">
+                    <textarea class="text" rows="10" cols="70" name="input" id="1">{{ .Col }}</textarea>
+                    <label for="someId" class="form__label1">Type text: Hello World</label>
+                </div>
+                <div class="radio-buttons">
+                    <div class="wrapper">
+                        <label class="custom-radio">
+                            <input type="radio" value="standard.txt" name="banner" checked>
+                            <span class="radio-btn btn_standard"><img class="las la-check" src="https://img.icons8.com/external-becris-lineal-becris/64/ffffff/external-check-mintab-for-ios-becris-lineal-becris-1.png"/></span>
+                        </label>
+                        <div class="text1">
+                            <span>standard</span>
+                        </div>
+                    </div>
+                    <div class="wrapper">
+                        <label class="custom-radio">
+                            <input type="radio" value="shadow.txt" name="banner" >
+                            <span class="radio-btn btn_shadow"><img class="las la-check" src="https://img.icons8.com/external-becris-lineal-becris/64/ffffff/external-check-mintab-for-ios-becris-lineal-becris-1.png"/></span>
+                        </label>
+                        <div class="text1">
+                            <span>shadow</span>
+                        </div>
+                    </div>
+                    <div class="wrapper">
+                        <label class="custom-radio">
+                            <input type="radio" value="thinkertoy.txt" name="banner">
+                            <span class="radio-btn btn_thinkertoy"><img class="las la-check" src="https://img.icons8.com/external-becris-lineal-becris/64/ffffff/external-check-mintab-for-ios-becris-lineal-becris-1.png"/></span>
+                        </label>
+                        <div class="text1">
+                            <span>Thinkertoy</span>
+                        </div>
+                    </div>
+                </div>  
+
+                <div class="buttons">
+                    <button class="btn_res" value="submit" name="submit">submit</button>
+                    <button class="btn_res" value="download" name="download">download</button>
+                </div>
+               
+                <pre class="pre" name="pre">Ascii-art</br>{{ .Data }}</pre>
+            </form>
+            
+            
+        </div>
+        <!-- <script src="/static/js/main.js"></script> -->
+    </body>
+    </html>
+    
+    
